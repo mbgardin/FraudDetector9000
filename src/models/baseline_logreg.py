@@ -4,10 +4,9 @@ from sklearn.pipeline import Pipeline
 def make_logreg_pipeline(preprocessor):
     clf = LogisticRegression(
         max_iter=2000,
-        class_weight=balanced,
-        n_jobs=None
+        class_weight="balanced",
     )
     return Pipeline(steps=[
-        (preprocess, preprocessor),
-        (model, clf)
+        ("preprocess", preprocessor),
+        ("model", clf),
     ])
