@@ -1,15 +1,14 @@
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler
-from sklearn.pipeline import Pipeline
 
 def make_preprocessor(feature_cols, scale_cols):
     # Scale only selected cols, pass through the rest
     return ColumnTransformer(
         transformers=[
-            (scale, StandardScaler(), scale_cols),
+            ("scale", StandardScaler(), scale_cols),
         ],
-        remainder=passthrough,
+        remainder="passthrough",
         verbose_feature_names_out=False
     )
 
