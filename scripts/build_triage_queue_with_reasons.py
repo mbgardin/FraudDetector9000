@@ -54,7 +54,13 @@ def main():
     reasons = top_reason_codes(lr, flagged_X, top_k=3, include_values=True)
 
     triage_test = triage_test.join(reasons, how="left")
-
+    # Persist full triage queue for downstream human review simulation / UI
+    out_path = paths.data_dir / "triage_queue_test.csv"
+    triage_test_out = triage_test.copy()
+    triage_test_out["is_fraud"] = pd.Series(y_test.values, index=X_test.index).values  # for simulation only
+    triage_test_out.to_csv(out_path, index=True)  # keep index = transaction_index
+    print(f"Wrote {out_path}")
+    
     # Preview: show a few flagged rows (with label for sanity)
     preview = triage_test.loc[flagged_mask, ["risk_score", "decision_band", "reason_1", "reason_2", "reason_3",
                                             "reason_1_score", "reason_2_score", "reason_3_score"]].copy()

@@ -4,5 +4,5 @@ REVIEW_COLUMNS = [
     "decision_band",
     "reviewer_action",     # confirmed_fraud | false_positive | needs_more_info
     "reviewer_notes",
-    "review_timestamp",
+    "review_timestamp_utc",
 ]

@@ -1,13 +1,16 @@
 # Review Simulation Preview
 
-Simulated analyst feedback counts:
+- Loaded triage queue: `triage_queue_test.csv`
+- Appended 119 simulated reviews to: `reviews.csv`
+
+## Reviewer action counts (all stored reviews)
 
 | reviewer_action   |   count |
 |:------------------|--------:|
-| confirmed_fraud   |       7 |
-| false_positive    |      39 |
-| needs_more_info   |       4 |
+| false_positive    |     140 |
+| confirmed_fraud   |      16 |
+| needs_more_info   |      13 |
 
 ## Notes
-- This simulates human-in-the-loop feedback.
-- In production, these labels would arrive asynchronously.
+- This is a prototype simulation to prove the human-in-the-loop data contract.
+- In production, reviewer actions arrive asynchronously and may disagree with ground truth.
