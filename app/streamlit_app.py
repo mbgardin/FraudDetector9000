@@ -1,11 +1,9 @@
 import sys
 from pathlib import Path
-from src.app.io import load_triage_queue, load_reviews, reviews_for_transaction
-
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.append(str(ROOT))
-
+from src.app.io import load_triage_queue, load_reviews, reviews_for_transaction
 import streamlit as st
 
 from src.config import Paths
@@ -76,18 +74,18 @@ if tx_id is not None and len(df):
     c3.metric("Reviewed?", "Yes" if int(tx_id) in already_reviewed else "No")
 history = reviews_for_transaction(reviews, tx_id)
 
-    if not history.empty:
+if not history.empty:
         st.subheader("Review history")
         st.dataframe(
-            history[[
-                "review_timestamp_utc",
-                "reviewer_action",
-                "reviewer_notes"
-            ]].sort_values("review_timestamp_utc", ascending=False),
-            use_container_width=True
-        )
-    else:
-        st.info("No prior reviews for this transaction.")
+        history[[
+            "review_timestamp_utc",
+            "reviewer_action",
+            "reviewer_notes"
+        ]].sort_values("review_timestamp_utc", ascending=False),
+        use_container_width=True
+    )
+else:
+    st.info("No prior reviews for this transaction.")
 
     st.write("**Top reasons:**")
     st.write([row.get("reason_1"), row.get("reason_2"), row.get("reason_3")])
