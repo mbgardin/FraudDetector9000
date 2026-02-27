@@ -1,6 +1,6 @@
 # Decision Policy (Human-in-the-loop)
 
-We do not use a single “fraud/not fraud” decision. We use a triage policy:
+I do not use a single “fraud/not fraud” decision. I use a triage policy:
 
 ## Risk bands
 - **Approve**: low risk, no human review

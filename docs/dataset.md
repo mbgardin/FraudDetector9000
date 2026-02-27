@@ -1,7 +1,7 @@
 # Dataset
 
 ## Primary dataset
-We start with the public "Credit Card Fraud Detection" dataset (often referenced as the MLG-ULB dataset).
+I started with the public "Credit Card Fraud Detection" dataset (often referenced as the MLG-ULB dataset).
 
 High-level characteristics:
 - ~285k transactions
