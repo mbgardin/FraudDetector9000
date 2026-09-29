@@ -1,0 +1,11 @@
+transaction_index,risk_score,decision_band,reviewer_action,reviewer_notes,review_timestamp_utc
+274467,0.999983036056462,review,confirmed_fraud,High-risk pattern and top contributing features strongly indicate fraud. Recommend block + notify customer.,2026-01-29T21:51:12.269995+00:00
+261473,0.9999972414609324,review,confirmed_fraud,High-risk pattern and top contributing features strongly indicate fraud. Recommend block + notify customer.,2026-01-29T21:51:14.634090+00:00
+249607,0.9999760730564484,review,confirmed_fraud,High-risk pattern and top contributing features strongly indicate fraud. Recommend block + notify customer.,2026-01-29T21:51:15.521236+00:00
+280149,0.9999675284497632,review,confirmed_fraud,High-risk pattern and top contributing features strongly indicate fraud. Recommend block + notify customer.,2026-01-29T21:51:16.432575+00:00
+244674,0.9999652852687873,review,confirmed_fraud,High-risk pattern and top contributing features strongly indicate fraud. Recommend block + notify customer.,2026-01-29T21:51:18.300798+00:00
+247672,0.9999628632684372,review,confirmed_fraud,High-risk pattern and top contributing features strongly indicate fraud. Recommend block + notify customer.,2026-01-29T21:51:25.346197+00:00
+258403,0.999955417662444,review,confirmed_fraud,High-risk pattern and top contributing features strongly indicate fraud. Recommend block + notify customer.,2026-01-29T21:51:26.380205+00:00
+274475,0.9999550015161938,review,confirmed_fraud,"High values for each reason, a risk score of .9999, marked confirmed fraud.",2026-01-29T22:19:56.001582+00:00
+263355,0.999916005159685,review,confirmed_fraud,"High values for each reason, a risk score of .9999, marked confirmed fraud.",2026-01-29T22:20:46.366287+00:00
+243699,1.0,decline,confirmed_fraud,100% risk score 1am in india,2026-02-27T22:28:49.957457+00:00
